@@ -1,29 +1,52 @@
-Django==3.2.10
-Pillow
-django-anymail
-django-axes
-django-cryptography
-django-crispy-forms
-django-csp
-django-datatable-view
-django-debug-toolbar
-django-formtools
-django-multiselectfield
-django-simple-captcha
-django-resized
-django-select2
-django-sn
-django-extensions
-django-upload-form
-django-dbbackup
-django-storages
-django-crontab
-dropbox
-numpy
-opencv-python
-pycryptodome
-python-dateutil
-python-gnupg
-reportlab
-bleach
-mysqlclient
+asgiref                 ==3.4.1
+bleach                  ==4.1.0
+certifi                 ==2021.10.8
+cffi                    ==1.15.0
+charset-normalizer      ==2.0.9
+cryptography            ==36.0.1
+Django                  ==3.2.10
+django-anymail          ==8.4
+django-appconf          ==1.0.5
+django-axes             ==5.28.0
+django-crispy-forms     ==1.13.0
+django-crontab          ==0.7.1
+django-cryptography     ==1.0
+django-csp              ==3.7
+django-datatable-view   ==2.1.6
+django-dbbackup         ==3.3.0
+django-debug-toolbar    ==3.2.4
+django-extensions       ==3.1.5
+django-formtools        ==2.3
+django-ipware           ==4.0.2
+django-multiselectfield ==0.1.12
+django-ranged-response  ==0.2.0
+django-resized          ==0.3.11
+django-select2          ==7.9.0
+django-simple-captcha   ==0.5.14
+django-sn               ==0.8.11.9
+django-storages         ==1.12.3
+django-upload-form      ==0.5.0
+dropbox                 ==11.25.0
+idna                    ==3.3
+mysqlclient             ==2.1.0
+numpy                   ==1.22.0
+opencv-python           ==4.5.5.62
+packaging               ==21.3
+Pillow                  ==8.4.0
+pip                     ==21.2.4
+ply                     ==3.11
+pycparser               ==2.21
+pycryptodome            ==3.12.0
+pyparsing               ==3.0.6
+python-dateutil         ==2.8.2
+python-gnupg            ==0.4.8
+pytz                    ==2021.3
+reportlab               ==3.6.5
+requests                ==2.26.0
+setuptools              ==57.5.0
+six                     ==1.16.0
+sqlparse                ==0.4.2
+stone                   ==3.2.1
+urllib3                 ==1.26.7
+webencodings            ==0.5.1
+wheel                   ==0.37.0
