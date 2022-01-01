@@ -1,4 +1,14 @@
-cp ./config/docker/docker-compose.yml ./
-cp ./config/docker/Dockerfile ./
+#!/bin/bash
 
-docker-compose up -d
+echo Choisissez entre les environements: dev ou prod
+read env
+
+if [ $env != "dev" ] && [ $env != "prod" ]
+then
+  echo "choisissez correctement dev ou prod!"
+else
+  cp ./config/$env/docker/docker-compose.yml ./
+  cp ./config/$env/docker/Dockerfile ./
+fi
+docker-compose up -d --build
+echo "Super, l'environnement $env est prêt"

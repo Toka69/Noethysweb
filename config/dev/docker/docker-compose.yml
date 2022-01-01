@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    restart: on-failure
+    command: >
+      sh -c "pip install -r noethys/requirements.txt && 
+             python /noethys/noethysweb/manage.py migrate &&
+             python /noethys/noethysweb/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/noethys
+    ports:
+      - "39690:8000"
+    depends_on:
+      - "mariadb"
+
+  mariadb:
+    image: mariadb
+    restart: on-failure
+    volumes:
+      - /docker/noethysweb/mariadb:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=noethys
+      - MARIADB_DATABASE=noethysweb
+    ports:
+      - "39693:3306"
+
+  phpMyAdmin:
+    image: phpmyadmin
+    restart: on-failure
+    ports:
+      - "39692:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
