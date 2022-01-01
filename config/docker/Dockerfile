@@ -1,0 +1,3 @@
+FROM python:latest
+
+CMD [ "sleep","infinity" ]

@@ -160,3 +160,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/docker-compose.yml
+/noethysweb/static/
+/Dockerfile

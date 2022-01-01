@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    restart: on-failure
+    command: >
+      sh -c "pip install -r noethys/requirements.txt && 
+             python /noethys/noethysweb/manage.py migrate &&
+             python /noethys/noethysweb/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/noethys
+    ports:
+      - "39690:8000"
